@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    width: 75vmin;
+    font-size: 5vmin;
+    margin-bottom: -2vh;
+}
+
+.add_word{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vmin;
+    height: 20vh;
+}
+
+.input_word{
+    width: 65vmin;
+    height: 16vh;
+}
+
+.submit_btn{
+    width: 15vmin;
+    height: 15vh;
+    margin-left: 3vmin;
+}
+
+.entrances{
+    display: flex;
+    width: 80vmin;
+    justify-content: space-evenly;
+}
+
+.entrance{
+    width: 38vmin;
+    height: 10vh;
+}

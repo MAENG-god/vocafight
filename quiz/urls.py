@@ -1,6 +1,7 @@
+from unicodedata import name
 from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.quiz, name="quiz")
+    path("", views.quiz, name="quiz"),
 ]
