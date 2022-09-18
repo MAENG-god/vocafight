@@ -9,7 +9,7 @@ body{
 .title{
     width: 75vmin;
     font-size: 5vmin;
-    margin-bottom: -2vh;
+    /* margin-bottom: -2vh; */
 }
 
 .add_word{

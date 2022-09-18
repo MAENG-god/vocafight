@@ -1,43 +1,26 @@
 body{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.test{
-    display: flex;
     flex-direction: column;
-    width: 40vmax;
-    outline: 1px soild black;
-}
-
-.eng{
-    display: flex;
-    width: 40vmax;
-    height: 30vh;
     justify-content: center;
     align-items: center;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    height: 20vh;
     font-size: 5vh;
-    outline: 1px solid black;
-    border-radius: 1vh;
-    margin-bottom: 2vh;
+    border-bottom: 2px solid black;
+    margin-bottom: 3vh;
 }
 
-.kor{
+.vocabulary{
     display: flex;
-    visibility: hidden;
-    width: 40vmax;
-    height: 10vh;
-    justify-content: center;
-    align-items: center;
-    font-size: 3vh;
-    outline: 1px solid black;
-    border-radius: 1vh;
-    margin-bottom: 2vh;
+    width: 90vw;
+    flex-wrap: wrap;
 }
 
-.answer{
-    height: 10vh;
-    margin-bottom: 2vh;
+.daily_btn{
+    margin: 1vh 1vw 1vh 1vw;
 }

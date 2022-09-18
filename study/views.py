@@ -25,7 +25,6 @@ def vocabulary(request):
     for date in voca_dates:
         dates.append(date.today)
     dates = list(set(dates))
-    print(dates)
     template = loader.get_template('study/vocabulary.html')
     context = {
         "dates": dates

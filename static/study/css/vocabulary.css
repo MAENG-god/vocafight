@@ -18,6 +18,7 @@ body{
 .vocabulary{
     display: flex;
     width: 90vw;
+    flex-wrap: wrap;
 }
 
 .daily_btn{
