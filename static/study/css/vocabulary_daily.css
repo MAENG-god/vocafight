@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    height: 20vh;
+    font-size: 5vh;
+    border-bottom: 2px solid black;
+    margin-bottom: 3vh;
+}
+
+.vocabulary{
+    display: flex;
+    flex-direction: column;
+    width: 40vmax;
+}
+
+.voca{
+    display: flex;
+    width: 40vmax;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+}
+
+.eng{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vmax;
+    height: 4vh;
+    border-right: 1px solid black;
+}
+
+.kor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vmax;
+    height: 4vh;
+}

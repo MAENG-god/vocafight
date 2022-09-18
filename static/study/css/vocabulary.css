@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    height: 20vh;
+    font-size: 5vh;
+    border-bottom: 2px solid black;
+    margin-bottom: 3vh;
+}
+
+.vocabulary{
+    display: flex;
+    width: 90vw;
+}
+
+.daily_btn{
+    margin: 1vh 1vw 1vh 1vw;
+}
