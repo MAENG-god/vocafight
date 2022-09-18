@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'quiz/css/quiz.css' %}">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
 </head>
 <body>
-    <h1>{{eng}}</h1>
+    <div class="test">
+        <div class="eng">
+            {{eng}}
+        </div>
+        <div class="kor">
+            {{kor}}
+        </div>
+        <button class="answer btn btn-primary" onclick="show_mean()">뜻 보기</button>
+        <button class="answer btn btn-danger" onclick="location.href = '/quiz/'">다음</button>
+    </div>
+    <script src="{% static 'quiz/js/quiz.js' %}"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script>
+        function show_mean(){
+            var mean = document.querySelector(".kor");
+            mean.style.visibility = 'visible';
+        }
+    </script>
 </body>
 </html>

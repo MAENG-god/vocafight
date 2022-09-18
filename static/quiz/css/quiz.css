@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.test{
+    display: flex;
+    flex-direction: column;
+    width: 40vmax;
+    outline: 1px soild black;
+}
+
+.eng{
+    display: flex;
+    width: 40vmax;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vh;
+    outline: 1px solid black;
+    border-radius: 1vh;
+    margin-bottom: 2vh;
+}
+
+.kor{
+    display: flex;
+    visibility: hidden;
+    width: 40vmax;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    outline: 1px solid black;
+    border-radius: 1vh;
+    margin-bottom: 2vh;
+}
+
+.answer{
+    height: 10vh;
+    margin-bottom: 2vh;
+}
