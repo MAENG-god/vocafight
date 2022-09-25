@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
-from study.models import Voca
+from study.models import Vocas, Vocabulary
 import random
 from datetime import datetime
 # Create your views here.
 
 def quiz(request):
-    voca_dates = Voca.objects.all()
+    voca_dates = Vocas.objects.all()
     dates = []
     for date in voca_dates:
         dates.append(date.today)
@@ -20,7 +20,7 @@ def quiz(request):
     return HttpResponse(template.render(context, request))
 
 def quiz_all(request):
-    vocas = Voca.objects.all()
+    vocas = Vocas.objects.all()
     random_num = random.randint(0, len(vocas) - 1)
     voca = vocas[random_num]
     eng = voca.eng
@@ -34,6 +34,7 @@ def quiz_all(request):
     return HttpResponse(template.render(context, request))
 
 def quiz_daily(request, date):
+    date_url = date
     months = [None, "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     date = date.split()
     date[1] = date[1].replace(',', '')
@@ -42,7 +43,7 @@ def quiz_daily(request, date):
     date = date[2] + "-" + date[0] + "-" + date[1]
     date_format = "%Y-%m-%d"
     date = datetime.strptime(date, date_format)
-    vocas = Voca.objects.filter(today=date)
+    vocas = Vocas.objects.filter(today=date)
     random_num = random.randint(0, len(vocas) - 1)
     voca = vocas[random_num]
     eng = voca.eng
@@ -52,5 +53,6 @@ def quiz_daily(request, date):
     context = {
         "eng": eng,
         "kor": kor,
+        "date": date_url,
     }
     return HttpResponse(template.render(context, request))  

@@ -13,8 +13,9 @@
 <body>
     <div class="title">VOCABULARY</div>
     <div class="vocabulary">
-    {% for date in dates %}
-        <button class="btn btn-outline-secondary daily_btn" value="{{date}}" onclick="location.href='/study/vocabulary/{{date}}/'">{{date}}</button>
+        <button class="btn btn-outline-secondary daily_btn" onclick="location.href='/study/create/'">새 단어장 생성</button>
+    {% for vocabulary in vocabularys %}
+        <button class="btn btn-outline-secondary daily_btn" value="{{date}}" onclick="location.href='/study/vocabulary/{{date}}/'">{{vocabulary.name}}</button>
     {% endfor %}
     </div>
     <script src="{% static 'study/js/vocabulary.js' %}"></script>

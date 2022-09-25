@@ -21,4 +21,5 @@ urlpatterns = [
     path("study/", include('study.urls')),
     path("quiz/", include('quiz.urls')),
     path("", include('study.urls')),
+    path("accounts/", include('allauth.urls')),
 ]

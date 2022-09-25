@@ -26,6 +26,8 @@
         </div>
         <button type="submit" class="btn btn-outline-secondary btn-lg submit_btn">저장</button>
     </form>
+    {% load socialaccount %}
+    <button onclick="location.href='{% provider_login_url "kakao" %}'" class="login_btn">시작하기</button>
     <div class="entrances">
         <button type="button" class="btn btn-primary entrance" onclick="go_wordlist()">단어장</button>
         <button type="button" class="btn btn-danger entrance" onclick="start_test()">테스트</button>

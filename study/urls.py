@@ -5,5 +5,6 @@ urlpatterns = [
     path("", views.study, name="study"),
     path("registration/", views.register, name="registration"),
     path("vocabulary/", views.vocabulary, name="vocabulary"),
+    path("create/", views.createvocabulary),
     path("vocabulary/<str:date>/", views.vocabulary_daily),
 ]
