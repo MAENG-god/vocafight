@@ -9,16 +9,22 @@ body{
     display: flex;
     align-items: center;
     width: 90vw;
-    height: 20vh;
+    height: 20vmin;
     font-size: 5vh;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     margin-bottom: 3vh;
+}
+
+.logo{
+    width: 25vmin;
+    cursor: pointer;
 }
 
 .vocabulary{
     display: flex;
     flex-direction: column;
     width: 40vmax;
+    border-top: 1px solid black;
 }
 
 .voca{
@@ -35,8 +41,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 20vmax;
-    height: 4vh;
-    border-right: 1px solid black;
+    padding: 1vh 1vw 1vh 1vw;
 }
 
 .kor{
@@ -44,5 +49,8 @@ body{
     justify-content: center;
     align-items: center;
     width: 20vmax;
-    height: 4vh;
+    flex-wrap: wrap;
+    border-left: 1px solid black;
+    padding: 1vh 1vw 1vh 1vw;
+    
 }

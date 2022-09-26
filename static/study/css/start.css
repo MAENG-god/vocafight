@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title{
+    width: 50vmax;
+
+}
+
+.entrances{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vmax;
+}
+
+.entrance{
+    width: 19vmax;
+}

@@ -1,9 +1,30 @@
 body{
     display: flex;
     flex-direction: column;
-    height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+.whole{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.page_title{
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    height: 20vmin;
+    font-size: 5vh;
+    margin-bottom: 3vh;
+}
+
+.logo{
+    width: 25vmin;
+    cursor: pointer;
 }
 
 .title{
@@ -39,6 +60,6 @@ body{
 }
 
 .entrance{
-    width: 38vmin;
+    width: 78vmin;
     height: 10vh;
 }

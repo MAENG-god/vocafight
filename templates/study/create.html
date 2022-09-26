@@ -38,9 +38,29 @@
             width: 100%;
             margin-top: 1rem;
         }
+
+        .page_title{
+            display: flex;
+            position: absolute;
+            align-items: center;
+            width: 90vw;
+            height: 20vmin;
+            font-size: 5vh;
+            border-bottom: 1px solid black;
+            top: 0;
+        }
+
+        .logo{
+            width: 25vmin;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
+    {% load static %}
+    <div class="page_title">
+        <img src="{% static 'study/img/vocafight_logo.png' %}" class="logo">
+    </div>
     <h3>새 단어장 생성</h3>
     <form action="/study/create/" method="post" class="register_form">
         {% csrf_token %}
@@ -52,5 +72,11 @@
     </form>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script>
+        var logo = document.querySelector(".logo");
+        logo.addEventListener("click", function(){
+            location.href = "/study/entrance/"
+        });
+    </script>
 </body>
 </html>

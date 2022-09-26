@@ -9,10 +9,15 @@ body{
     display: flex;
     align-items: center;
     width: 90vw;
-    height: 20vh;
+    height: 20vmin;
     font-size: 5vh;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     margin-bottom: 3vh;
+}
+
+.logo{
+    width: 25vmin;
+    cursor: pointer;
 }
 
 .vocabulary{
