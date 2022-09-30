@@ -1,5 +1,6 @@
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -10,6 +11,21 @@ body{
     flex-direction: column;
     width: 40vmax;
     outline: 1px soild black;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    height: 20vmin;
+    font-size: 5vh;
+    border-bottom: 1px solid black;
+    margin-bottom: 3vh;
+}
+
+.logo{
+    width: 25vmin;
+    cursor: pointer;
 }
 
 .eng{

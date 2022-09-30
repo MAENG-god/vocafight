@@ -43,8 +43,8 @@ def vocabulary(request):
 def createvocabulary(request):
     if request.POST:
         name = request.POST['name']
-        Vocabulary.objects.create(author=request.user, name=name)
-        return redirect('/study/vocabulary/')
+        vocabulary = Vocabulary.objects.create(author=request.user, name=name)
+        return redirect('/study/vocabulary/' + str(vocabulary.id) + "/")
     else:      
         template = loader.get_template('study/create.html')
         context = {

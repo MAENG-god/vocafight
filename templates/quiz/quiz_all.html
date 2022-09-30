@@ -12,6 +12,9 @@
 
 </head>
 <body>
+    <div class="title">
+        <img src="{% static 'study/img/vocafight_logo.png' %}" class="logo">
+    </div>
     <div class="test">
         <div class="eng">
             {{eng}}
@@ -30,6 +33,11 @@
             var mean = document.querySelector(".kor");
             mean.style.visibility = 'visible';
         }
+
+        var logo = document.querySelector(".logo");
+        logo.addEventListener("click", function(){
+            location.href = "/study/entrance/"
+        });
     </script>
 </body>
 </html>
