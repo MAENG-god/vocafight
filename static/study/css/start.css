@@ -16,8 +16,14 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 40vmax;
+    margin-top: -5vmax;
 }
 
 .entrance{
     width: 19vmax;
+    height: 5vmax;
+}
+
+.login_btn{
+    margin-top: -5vmax;
 }

@@ -33,4 +33,5 @@ body{
     height: 6vmax;
     border-radius: 12px;
     border: 1px solid black;
+    margin-top: -10vmax;
 }
