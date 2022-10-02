@@ -2,13 +2,11 @@ from django.shortcuts import render, redirect
 from django.template import loader
 from django.http import HttpResponse
 from .models import Vocas, Vocabulary
-from datetime import datetime
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 @login_required
-
 def entrance(request):
     template = loader.get_template('study/entrance.html')
     context = {
@@ -23,6 +21,7 @@ def study(request):
     }
     return HttpResponse(template.render(context, request))
 
+@login_required
 def register(request):
     id = request.POST['id']
     vocabulary = Vocabulary.objects.get(id=id)
@@ -31,6 +30,7 @@ def register(request):
     Vocas.objects.create(vocabulary=vocabulary, author=request.user, eng=voca, kor=mean)
     return redirect("/study/vocabulary/" + str(id) + "/")
     
+@login_required
 def vocabulary(request):
     vocabularys = Vocabulary.objects.all()
 
@@ -40,6 +40,7 @@ def vocabulary(request):
     }
     return HttpResponse(template.render(context, request))
 
+@login_required
 def createvocabulary(request):
     if request.POST:
         name = request.POST['name']
@@ -52,6 +53,7 @@ def createvocabulary(request):
         }
         return HttpResponse(template.render(context, request))
 
+@login_required
 def vocabulary_create(request, id):
     template = loader.get_template('study/vocabulary_create.html')
     context = {
@@ -59,11 +61,19 @@ def vocabulary_create(request, id):
     }
     return HttpResponse(template.render(context, request))
     
+@login_required
 def vocabulary_words(request, id):
     vocabulary = Vocabulary.objects.get(id=id)
     vocas = Vocas.objects.filter(vocabulary=vocabulary)
     template = loader.get_template('study/vocabulary_words.html')
     context = {
         "vocas":vocas,
+        "id": id,
     }
     return HttpResponse(template.render(context, request))
+
+@login_required
+def vocabulary_words_delete(request, vocabulary_id, voca_id):
+    voca = Vocas.objects.get(author=request.user, id=voca_id)
+    voca.delete()
+    return redirect("/study/vocabulary/words/" + str(vocabulary_id) + "/")

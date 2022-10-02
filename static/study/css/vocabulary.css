@@ -29,3 +29,35 @@ body{
 .daily_btn{
     margin: 1vh 1vw 1vh 1vw;
 }
+
+.hamberger_menu{
+    position: absolute;
+    top: 8vmin;
+    right: 10vw;
+    width: 5vw;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: left; /*    float: right; 원래 */
+    padding: 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: white;
+    background-image: none;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.icon-bar{
+    background-color: #563d7c; 
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.navbar-toggle .icon-bar+.icon-bar{
+    margin-top: 4px;
+}
