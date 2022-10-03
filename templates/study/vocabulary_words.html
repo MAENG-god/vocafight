@@ -29,7 +29,7 @@
     </div>
     <div class="vocabulary">
     {% for voca in vocas %}
-        <div class="voca">
+        <div class="voca voca_{{voca.id}}">
             <div class="eng">
                 {{voca.eng}}
             </div>
@@ -39,7 +39,13 @@
             <button class="delete btn btn-danger" onclick="location.href='/study/vocabulary/words/{{id}}/delete/{{voca.id}}/'">
                 삭제
             </button>
+            <button class="edit btn btn-primary" onclick="vocaEdit({{voca.id}}, {{id}})">
+                수정
+            </button>
         </div>
+        <form action="/study/vocabulary/words/{{id}}/edit/{{voca.id}}/" method="post" class="voca hidden_voca_{{voca.id}}" style="visibility: hidden;">
+            {% csrf_token%}
+        </form>
     {% endfor %}
     </div>
     <script src="{% static 'study/js/vocabulary_words.js' %}"></script>

@@ -77,3 +77,11 @@ def vocabulary_words_delete(request, vocabulary_id, voca_id):
     voca = Vocas.objects.get(author=request.user, id=voca_id)
     voca.delete()
     return redirect("/study/vocabulary/words/" + str(vocabulary_id) + "/")
+
+@login_required
+def vocabulary_words_edit(request, vocabulary_id, voca_id):
+    voca = Vocas.objects.get(author=request.user, id=voca_id)
+    voca.eng = request.POST['eng']
+    voca.kor = request.POST['kor']
+    voca.save()
+    return redirect("/study/vocabulary/words/" + str(vocabulary_id) + "/")
