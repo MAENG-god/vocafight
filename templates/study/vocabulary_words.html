@@ -39,12 +39,15 @@
             <button class="delete btn btn-danger" onclick="location.href='/study/vocabulary/words/{{id}}/delete/{{voca.id}}/'">
                 삭제
             </button>
-            <button class="edit btn btn-primary" onclick="vocaEdit({{voca.id}}, {{id}})">
+            <button class="edit btn btn-primary" onclick="vocaEdit({{voca.id}})">
                 수정
             </button>
         </div>
-        <form action="/study/vocabulary/words/{{id}}/edit/{{voca.id}}/" method="post" class="voca hidden_voca_{{voca.id}}" style="visibility: hidden;">
+        <form action="/study/vocabulary/words/{{id}}/edit/{{voca.id}}/" method="post" class="voca hidden_voca_{{voca.id}}" style="display:none;">
             {% csrf_token%}
+            <input class="eng" type="text" name="eng" placeholder="{{voca.eng}}">
+            <input class="kor" type="text" name="kor" placeholder="{{voca.kor}}">
+            <input class="btn submitBtn" value="확인" type="submit">
         </form>
     {% endfor %}
     </div>
