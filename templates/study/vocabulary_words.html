@@ -44,9 +44,9 @@
             </button>
         </div>
         <form action="/study/vocabulary/words/{{id}}/edit/{{voca.id}}/" method="post" class="voca hidden_voca_{{voca.id}}" style="display:none;">
-            {% csrf_token%}
-            <input class="eng" type="text" name="eng" placeholder="{{voca.eng}}">
-            <input class="kor" type="text" name="kor" placeholder="{{voca.kor}}">
+            {% csrf_token %}
+            <input class="eng" type="text" name="eng" value="{{voca.eng}}">
+            <input class="kor" type="text" name="kor" value="{{voca.kor}}">
             <input class="btn submitBtn" value="확인" type="submit">
         </form>
     {% endfor %}
