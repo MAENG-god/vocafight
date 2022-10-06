@@ -36,12 +36,29 @@
             <div class="kor">
                 {{voca.kor}}
             </div>
-            <button class="delete btn btn-danger" onclick="location.href='/study/vocabulary/words/{{id}}/delete/{{voca.id}}/'">
+            <button class="delete btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{voca.id}}">
                 삭제
             </button>
             <button class="edit btn btn-primary" onclick="vocaEdit({{voca.id}})">
                 수정
             </button>
+            <div class="modal fade" id="exampleModal{{voca.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">경고</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      삭제하시겠습니까?
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                      <button type="button" class="btn btn-danger" onclick="location.href='/study/vocabulary/words/{{id}}/delete/{{voca.id}}/'">삭제</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
         <form action="/study/vocabulary/words/{{id}}/edit/{{voca.id}}/" method="post" class="voca hidden_voca_{{voca.id}}" style="display:none;">
             {% csrf_token %}

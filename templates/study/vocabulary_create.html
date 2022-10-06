@@ -30,7 +30,27 @@
     <div class="whole">
         <div class="vocabularyTitle removeTarget">
             <h1>{{vocabulary.name}}</h1>
-            <button class="editTitleBtn btn btn-secondary" onclick="showEditForm()">단어장 이름 변경</button>
+            <div class="btnGroup">
+                <button class="editTitleBtn btn btn-primary" onclick="showEditForm()">단어장 이름 변경</button>
+                <button class="deleteVocabularyBtn btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">단어장 삭제</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">경고</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          삭제하시겠습니까?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                          <button type="button" class="btn btn-danger" onclick="location.href='/study/vocabulary/{{id}}/delete/'">삭제</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <form class="vocabularyTitle showTarget" action="/study/vocabulary/{{id}}/" method="post" style="display:none;">
             {% csrf_token %}
@@ -54,7 +74,7 @@
             <button type="submit" class="btn btn-outline-secondary btn-lg submit_btn">저장</button>
         </form>
         <div class="entrances">
-            <button type="button" class="btn btn-primary entrance" onclick="location.href='/study/vocabulary/words/{{id}}/'">단어장 가기</button>
+            <button type="button" class="entrance" onclick="location.href='/study/vocabulary/words/{{id}}/'">단어장 가기</button>
         </div>
     </div>
     <script src="{% static 'study/js/study.js' %}"></script>

@@ -28,6 +28,10 @@ body{
     height: 5vh;
 }
 
+.deleteVocabularyBtn{
+    height: 5vh;
+}
+
 .page_title{
     display: flex;
     align-items: center;
@@ -71,12 +75,25 @@ body{
     display: flex;
     width: 80vmin;
     justify-content: space-evenly;
-    margin-top: 3vh;
+    margin-top: 2vh;
 }
 
 .entrance{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 78vmin;
     height: 10vh;
+    font-size: 6vmin;
+    font-weight:normal;
+    border-radius: 3vh;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.entrance:hover{
+    background-color: gray;
 }
 
 .hamberger_menu{

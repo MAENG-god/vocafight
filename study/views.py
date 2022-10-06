@@ -80,6 +80,12 @@ def vocabulary_words(request, id):
     return HttpResponse(template.render(context, request))
 
 @login_required
+def vocabulary_delete(request, id):
+    vocabulary = Vocabulary.objects.get(author=request.user, id=id)
+    vocabulary.delete()
+    return redirect("/study/vocabulary/") 
+
+@login_required
 def vocabulary_words_delete(request, vocabulary_id, voca_id):
     voca = Vocas.objects.get(author=request.user, id=voca_id)
     voca.delete()
