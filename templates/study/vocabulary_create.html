@@ -28,6 +28,15 @@
         <img src="{% static 'study/img/vocafight_logo.png' %}" class="logo">
     </div>
     <div class="whole">
+        <div class="vocabularyTitle removeTarget">
+            <h1>{{vocabulary.name}}</h1>
+            <button class="editTitleBtn btn btn-secondary" onclick="showEditForm()">단어장 이름 변경</button>
+        </div>
+        <form class="vocabularyTitle showTarget" action="/study/vocabulary/{{id}}/" method="post" style="display:none;">
+            {% csrf_token %}
+            <input value="{{vocabulary.name}}" name="vocabularyName" type="text">
+            <input type="submit" value="확인" class="editTitleBtn btn btn-secondary">
+        </form>
         <div class="title">단어 등록하기</div>
         <form class="add_word" action="/study/registration/" method="post">
             {% csrf_token %}
@@ -56,6 +65,13 @@
         logo.addEventListener("click", function(){
             location.href = "/study/entrance/"
         });
+
+        function showEditForm(){
+            var vocaName = document.querySelector(".removeTarget");
+            vocaName.remove();
+            var editForm = document.querySelector(".showTarget");
+            editForm.style.display = "flex";
+        }
     </script>
 </body>
 </html>

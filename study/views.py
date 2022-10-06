@@ -32,7 +32,7 @@ def register(request):
     
 @login_required
 def vocabulary(request):
-    vocabularys = Vocabulary.objects.all()
+    vocabularys = Vocabulary.objects.filter(author=request.user)
 
     template = loader.get_template('study/vocabulary.html')
     context = {
@@ -55,11 +55,18 @@ def createvocabulary(request):
 
 @login_required
 def vocabulary_create(request, id):
-    template = loader.get_template('study/vocabulary_create.html')
-    context = {
-        "id": id
-    }
-    return HttpResponse(template.render(context, request))
+    vocabulary = Vocabulary.objects.get(author=request.user, id=id)
+    if request.POST:
+        vocabulary.name = request.POST["vocabularyName"]
+        vocabulary.save()
+        return redirect("/study/vocabulary/{}/".format(id))
+    else:
+        template = loader.get_template('study/vocabulary_create.html')
+        context = {
+            "id": id,
+            "vocabulary": vocabulary,
+        }
+        return HttpResponse(template.render(context, request))
     
 @login_required
 def vocabulary_words(request, id):

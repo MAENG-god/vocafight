@@ -13,6 +13,21 @@ body{
     align-items: center;
 }
 
+.vocabularyTitle{
+    display: flex;
+    width: 80vmin;
+    height: 8vh;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3vh;
+    border-bottom: 1px solid black;
+    font-size: 5vh;
+}
+
+.editTitleBtn{
+    height: 5vh;
+}
+
 .page_title{
     display: flex;
     align-items: center;
@@ -29,7 +44,7 @@ body{
 
 .title{
     width: 75vmin;
-    font-size: 5vmin;
+    font-size: 3vh;
     /* margin-bottom: -2vh; */
 }
 
