@@ -23,6 +23,16 @@
         <div class="kor">
             {{voca.kor}}
         </div>
+        <div class="firstHint">
+            {{firstKor}}
+        </div>
+        <div class="secondHint">
+            {{secondKor}}
+        </div>
+        <div class="hintGroup">
+            <button class="hintBtn btn btn-warning" onclick="show_firstHint()">첫 글자만 보기</button>
+            <button class="hintBtn btn btn-warning" onclick="show_secondHint()">두 글자만 보기</button>
+        </div>
         <button class="answer btn btn-primary" onclick="show_mean()">뜻 보기</button>
         <button class="answer btn btn-danger" onclick="location.href = '/quiz/{{id}}/'">다음</button>
     </div>
@@ -37,7 +47,30 @@
     <script>
         function show_mean(){
             var mean = document.querySelector(".kor");
-            mean.style.visibility = 'visible';
+            var firstHint = document.querySelector(".firstHint");
+            var secondHint = document.querySelector(".secondHint");
+            mean.style.display = "flex"
+            mean.style.visibility = "visible"
+            firstHint.style.display = "none"
+            secondHint.style.display = "none"
+        }
+
+        function show_firstHint(){
+            var mean = document.querySelector(".kor");
+            var firstHint = document.querySelector(".firstHint");
+            var secondHint = document.querySelector(".secondHint");
+            mean.style.display = "none"
+            firstHint.style.display = "flex"
+            secondHint.style.display = "none"
+        }
+
+        function show_secondHint(){
+            var mean = document.querySelector(".kor");
+            var firstHint = document.querySelector(".firstHint");
+            var secondHint = document.querySelector(".secondHint");
+            mean.style.display = "none"
+            firstHint.style.display = "none"
+            secondHint.style.display = "flex"
         }
 
         var logo = document.querySelector(".logo");

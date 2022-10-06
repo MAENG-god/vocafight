@@ -36,10 +36,17 @@ def quiz_daily(request, id):
     if vocas:
         random_num = random.randint(0, len(vocas) - 1)
         voca = vocas[random_num]
+        if len(voca.kor) >= 2:
+            firstKor = voca.kor[0]
+            secondKor = voca.kor[0:2]
+        else:
+            firstKor, secondKor = "단어가 너무 짧거나 없음", "단어가 너무 짧거나 없음"
         context = {
             "vocas": vocas,
             "voca": voca,
             "id": id,
+            "firstKor": firstKor,
+            "secondKor": secondKor,
         }
     else:
         context = {

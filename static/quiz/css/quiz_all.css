@@ -37,7 +37,7 @@ body{
     font-size: 5vh;
     outline: 1px solid black;
     border-radius: 1vh;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
 }
 
 .kor{
@@ -50,12 +50,48 @@ body{
     font-size: 3vh;
     outline: 1px solid black;
     border-radius: 1vh;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
+}
+
+.firstHint{
+    display: none;
+    width: 40vmax;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    outline: 1px solid black;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+}
+
+.secondHint{
+    display: none;
+    width: 40vmax;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    outline: 1px solid black;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+}
+
+.hintGroup{
+    display: flex;
+    justify-content: space-between;
+    width: 40vmax;
+    margin-bottom: 1vh;
+}
+
+.hintBtn{
+    height: 10vh;
+    width: 19.5vmax;
 }
 
 .answer{
     height: 10vh;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
 }
 
 .hamberger_menu{

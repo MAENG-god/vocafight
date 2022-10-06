@@ -27,6 +27,7 @@
     <div class="title">
         <img src="{% static 'study/img/vocafight_logo.png' %}" class="logo">
     </div>
+    <button type="button" class="entrance" onclick="location.href='/study/vocabulary/{{id}}/'">단어 추가하기</button>
     <div class="vocabulary">
     {% for voca in vocas %}
         <div class="voca voca_{{voca.id}}">

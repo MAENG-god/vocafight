@@ -55,6 +55,24 @@ body{
     
 }
 
+.entrance{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vmax;
+    height: 10vmin;
+    font-size: 5vmin;
+    font-weight:lighter;
+    border-radius: 3vh;
+    background-color: rgb(209, 209, 209);
+    color: black;
+    border: none;
+    margin-bottom: 2vh;
+}
+
+.entrance:hover{
+    background-color: gray;
+}
 .hamberger_menu{
     position: absolute;
     top: 8vmin;
