@@ -55,7 +55,7 @@ body{
 
 .firstHint{
     display: none;
-    width: 40vmax;
+    width: 20vmax;
     height: 10vh;
     justify-content: center;
     align-items: center;
@@ -67,7 +67,7 @@ body{
 
 .secondHint{
     display: none;
-    width: 40vmax;
+    width: 20vmax;
     height: 10vh;
     justify-content: center;
     align-items: center;
@@ -92,6 +92,22 @@ body{
 .answer{
     height: 10vh;
     margin-bottom: 1vh;
+}
+
+.entrances{
+    display: flex;
+    justify-content: space-between;
+    width: 40vmax;
+}
+
+.quit{
+    height: 10vh;
+    width: 6vmax;
+}
+
+.next{
+    height: 10vh;
+    width: 33vmax;
 }
 
 .hamberger_menu{

@@ -17,7 +17,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </a>
-      
+    
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <li><a class="dropdown-item" href="#">Action</a></li>
           <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -31,17 +31,17 @@
     <div class="vocabulary">
     {% for voca in vocas %}
         <div class="voca voca_{{voca.id}}">
-            <div class="eng">
-                {{voca.eng}}
-            </div>
-            <div class="kor">
-                {{voca.kor}}
-            </div>
-            <button class="delete btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{voca.id}}">
-                삭제
+            <button class="edit" onclick="vocaEdit({{voca.id}})">           
             </button>
-            <button class="edit btn btn-primary" onclick="vocaEdit({{voca.id}})">
-                수정
+            <div class="set">
+                <div class="eng">
+                    {{voca.eng}}
+                </div>
+                <div class="kor">
+                    {{voca.kor}}
+                </div>
+            </div>
+            <button class="delete" data-bs-toggle="modal" data-bs-target="#exampleModal{{voca.id}}">
             </button>
             <div class="modal fade" id="exampleModal{{voca.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -63,9 +63,11 @@
         </div>
         <form action="/study/vocabulary/words/{{id}}/edit/{{voca.id}}/" method="post" class="voca hidden_voca_{{voca.id}}" style="display:none;">
             {% csrf_token %}
-            <input class="eng" type="text" name="eng" value="{{voca.eng}}">
-            <input class="kor" type="text" name="kor" value="{{voca.kor}}">
-            <input class="btn submitBtn" value="확인" type="submit">
+            <div class="set setForm">
+                <input class="eng" type="text" name="eng" value="{{voca.eng}}">
+                <input class="kor" type="text" name="kor" value="{{voca.kor}}">
+            </div>
+            <input class="btn btn-secondary submitBtn" value="확인" type="submit">
         </form>
     {% endfor %}
     </div>

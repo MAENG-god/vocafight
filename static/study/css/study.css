@@ -16,7 +16,7 @@ body{
 .vocabularyTitle{
     display: flex;
     width: 80vmin;
-    height: 8vh;
+    height: 8vmax;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3vh;
@@ -24,12 +24,30 @@ body{
     font-size: 5vh;
 }
 
+.btnGroup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 10vmax;
+}
+
 .editTitleBtn{
-    height: 5vh;
+    border: none;
+    background-color: white;
+    width: 4vmax;
+    height: 4vmax;
+    background-image: url("/static/study/img/edit.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .deleteVocabularyBtn{
-    height: 5vh;
+    border: none;
+    background-color: white;
+    width: 4vmax;
+    height: 6vmax;
+    background-image: url("/static/study/img/delete.png");
+    background-size: cover;
 }
 
 .page_title{
@@ -74,7 +92,7 @@ body{
 .entrances{
     display: flex;
     width: 80vmin;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-top: 2vh;
 }
 
@@ -82,18 +100,36 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 78vmin;
+    width: 69vmin;
     height: 10vh;
     font-size: 6vmin;
     font-weight:normal;
-    border-radius: 3vh;
+    border-radius: 1vh;
     background-color: black;
     color: white;
     border: none;
 }
 
+.contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vmin;
+    height: 10vh;
+    font-size: 1.5vmax;
+    font-weight:normal;
+    border-radius: 1vh;
+    background-color: rgb(202, 202, 202);
+    color: black;
+    border: none;
+}
+
 .entrance:hover{
-    background-color: gray;
+    background-color: rgb(66, 66, 66);
+}
+
+.contents:hover{
+    background-color: rgb(215, 215, 215);
 }
 
 .hamberger_menu{

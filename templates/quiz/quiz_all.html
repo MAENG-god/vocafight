@@ -15,23 +15,65 @@
     <div class="title">
         <img src="{% static 'study/img/vocafight_logo.png' %}" class="logo">
     </div>
+    {% if vocas %}
     <div class="test">
         <div class="eng">
-            {{eng}}
+            {{voca.eng}}
         </div>
         <div class="kor">
-            {{kor}}
+            {{voca.kor}}
+        </div>
+        <div class="firstHint">
+            {{firstKor}}
+        </div>
+        <div class="secondHint">
+            {{secondKor}}
+        </div>
+        <div class="hintGroup">
+            <button class="hintBtn btn btn-warning" onclick="show_firstHint()">첫 글자만 보기</button>
+            <button class="hintBtn btn btn-warning" onclick="show_secondHint()">두 글자만 보기</button>
         </div>
         <button class="answer btn btn-primary" onclick="show_mean()">뜻 보기</button>
-        <button class="answer btn btn-danger" onclick="location.href = '/quiz/all/'">다음</button>
+        <div class="entrances">
+            <button class="quit btn btn-dark" onclick="location.href = '/quiz/'">종료</button>
+            <button class="next btn btn-danger" onclick="location.href = '/quiz/start/'">다음</button>
+        </div>
     </div>
+    {% else %}
+    <div class="test">
+        단어가 없습니다
+    </div>
+    {% endif %}
     <script src="{% static 'quiz/js/quiz.js' %}"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script>
         function show_mean(){
             var mean = document.querySelector(".kor");
-            mean.style.visibility = 'visible';
+            var firstHint = document.querySelector(".firstHint");
+            var secondHint = document.querySelector(".secondHint");
+            mean.style.display = "flex"
+            mean.style.visibility = "visible"
+            firstHint.style.display = "none"
+            secondHint.style.display = "none"
+        }
+
+        function show_firstHint(){
+            var mean = document.querySelector(".kor");
+            var firstHint = document.querySelector(".firstHint");
+            var secondHint = document.querySelector(".secondHint");
+            mean.style.display = "none"
+            firstHint.style.display = "flex"
+            secondHint.style.display = "none"
+        }
+
+        function show_secondHint(){
+            var mean = document.querySelector(".kor");
+            var firstHint = document.querySelector(".firstHint");
+            var secondHint = document.querySelector(".secondHint");
+            mean.style.display = "none"
+            firstHint.style.display = "none"
+            secondHint.style.display = "flex"
         }
 
         var logo = document.querySelector(".logo");

@@ -31,8 +31,8 @@
         <div class="vocabularyTitle removeTarget">
             <h1>{{vocabulary.name}}</h1>
             <div class="btnGroup">
-                <button class="editTitleBtn btn btn-primary" onclick="showEditForm()">단어장 이름 변경</button>
-                <button class="deleteVocabularyBtn btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">단어장 삭제</button>
+                <button class="editTitleBtn" onclick="showEditForm()"></button>
+                <button class="deleteVocabularyBtn" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -55,7 +55,7 @@
         <form class="vocabularyTitle showTarget" action="/study/vocabulary/{{id}}/" method="post" style="display:none;">
             {% csrf_token %}
             <input value="{{vocabulary.name}}" name="vocabularyName" type="text">
-            <input type="submit" value="확인" class="editTitleBtn btn btn-secondary">
+            <input type="submit" value="확인" class="btn btn-secondary">
         </form>
         <div class="title">단어 등록하기</div>
         <form class="add_word" action="/study/registration/" method="post">
@@ -71,10 +71,11 @@
                 </div>
                 <input name="id" type="hidden" value="{{id}}">
             </div>
-            <button type="submit" class="btn btn-outline-secondary btn-lg submit_btn">저장</button>
+            <button type="submit" class="btn btn-outline-secondary btn-lg submit_btn">등록</button>
         </form>
         <div class="entrances">
             <button type="button" class="entrance" onclick="location.href='/study/vocabulary/words/{{id}}/'">단어장 가기</button>
+            <button type="button" class="contents" onclick="location.href='/study/vocabulary/'">목록</div>
         </div>
     </div>
     <script src="{% static 'study/js/study.js' %}"></script>
