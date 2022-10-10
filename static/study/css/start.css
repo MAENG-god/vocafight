@@ -28,6 +28,11 @@ body{
     margin-top: -5vmax;
 }
 
+.help{
+    font-weight: lighter;
+    color: black;
+}
+
 .hamberger_menu{
     position: absolute;
     top: 8vmin;

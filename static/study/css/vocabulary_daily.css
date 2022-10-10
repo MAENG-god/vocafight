@@ -85,24 +85,50 @@ body{
     margin-left: 2.5vmax;
 }
 
+.entrances{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vmax;
+    margin-bottom: 2vh;
+}
+
 .entrance{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40vmax;
+    width: 30vmax;
     height: 10vmin;
     font-size: 5vmin;
     font-weight:lighter;
-    border-radius: 3vh;
-    background-color: rgb(209, 209, 209);
+    border-radius: 1vh;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+.contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9vmax;
+    height: 10vmin;
+    font-size: 1.5vmax;
+    font-weight:lighter;
+    border-radius: 1vh;
+    background-color: rgb(202, 202, 202);
     color: black;
     border: none;
-    margin-bottom: 2vh;
 }
 
 .entrance:hover{
-    background-color: gray;
+    background-color: rgb(61, 61, 61);
 }
+
+.contents:hover{
+    background-color: rgb(215, 215, 215);
+}
+
 .hamberger_menu{
     position: absolute;
     top: 8vmin;

@@ -12,5 +12,6 @@ urlpatterns = [
     path("vocabulary/words/<int:id>/", views.vocabulary_words),
     path("vocabulary/words/<int:vocabulary_id>/delete/<int:voca_id>/", views.vocabulary_words_delete),
     path("vocabulary/words/<int:vocabulary_id>/edit/<int:voca_id>/", views.vocabulary_words_edit),
-    
+    path("information/", views.information),
+    path("help/", views.help),
 ]

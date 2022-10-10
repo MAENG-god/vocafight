@@ -6,6 +6,22 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+def help(request):
+    template = loader.get_template('study/help.html')
+    context = {
+
+    }
+    return HttpResponse(template.render(context, request))    
+
+@login_required
+def information(request):
+    userName = request.user
+    template = loader.get_template('study/information.html')
+    context = {
+        "userName": userName,
+    }
+    return HttpResponse(template.render(context, request))
+
 @login_required
 def entrance(request):
     template = loader.get_template('study/entrance.html')
