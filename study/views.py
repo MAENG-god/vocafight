@@ -114,3 +114,9 @@ def vocabulary_words_edit(request, vocabulary_id, voca_id):
     voca.kor = request.POST['kor']
     voca.save()
     return redirect("/study/vocabulary/words/" + str(vocabulary_id) + "/")
+
+@login_required
+def deleteUser(request):
+    user = request.user
+    user.delete()
+    return redirect("/accounts/logout/")

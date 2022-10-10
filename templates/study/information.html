@@ -61,6 +61,12 @@
             font-size: 2vh;
             font-weight: lighter;
         }
+
+        .link{
+            font-weight: lighter;
+            color: black;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -73,7 +79,24 @@
             <a class="link" href="/accounts/logout/">로그아웃</a>
         </div>
         <div class="unregister">
-            <a class="link" href="/accounts/logout/">회원탈퇴</a>
+            <a class="link" data-bs-toggle="modal" data-bs-target="#exampleModal">회원탈퇴</a>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">경고</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  정말 탈퇴하시겠습니까? 탈퇴 후에는 데이터 복구가 불가능합니다
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                  <button type="button" class="btn btn-danger" onclick="location.href='/study/deleteUser/'">삭제</button>
+                </div>
+              </div>
+            </div>
         </div>
     </div>
     <!-- JavaScript Bundle with Popper -->
