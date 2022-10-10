@@ -67,8 +67,8 @@
         <form action="/study/vocabulary/words/{{id}}/edit/{{voca.id}}/" method="post" class="voca hidden_voca_{{voca.id}}" style="display:none;">
             {% csrf_token %}
             <div class="set setForm">
-                <input class="eng" type="text" name="eng" value="{{voca.eng}}">
-                <input class="kor" type="text" name="kor" value="{{voca.kor}}">
+                <input class="eng" type="text" name="eng" value="{{voca.eng}}" required>
+                <input class="kor" type="text" name="kor" value="{{voca.kor}}" required>
             </div>
             <input class="btn btn-secondary submitBtn" value="확인" type="submit">
         </form>

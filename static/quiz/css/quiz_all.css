@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'GothicA1-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -38,6 +45,7 @@ body{
     outline: 1px solid black;
     border-radius: 1vh;
     margin-bottom: 1vh;
+    font-family: 'GothicA1-Light';
 }
 
 .kor{
@@ -51,11 +59,12 @@ body{
     outline: 1px solid black;
     border-radius: 1vh;
     margin-bottom: 1vh;
+    font-family: 'GothicA1-Light';
 }
 
 .firstHint{
     display: none;
-    width: 20vmax;
+    width: 40vmax;
     height: 10vh;
     justify-content: center;
     align-items: center;
@@ -63,11 +72,12 @@ body{
     outline: 1px solid black;
     border-radius: 1vh;
     margin-bottom: 1vh;
+    font-family: 'GothicA1-Light';
 }
 
 .secondHint{
     display: none;
-    width: 20vmax;
+    width: 40vmax;
     height: 10vh;
     justify-content: center;
     align-items: center;
@@ -75,6 +85,7 @@ body{
     outline: 1px solid black;
     border-radius: 1vh;
     margin-bottom: 1vh;
+    font-family: 'GothicA1-Light';
 }
 
 .hintGroup{
