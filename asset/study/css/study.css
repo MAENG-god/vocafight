@@ -1,0 +1,165 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.whole{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.vocabularyTitle{
+    display: flex;
+    width: 80vmin;
+    height: 8vmax;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3vh;
+    border-bottom: 1px solid black;
+    font-size: 5vh;
+}
+
+.btnGroup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 10vmax;
+}
+
+.editTitleBtn{
+    border: none;
+    background-color: white;
+    width: 4vmax;
+    height: 4vmax;
+    background-image: url("/static/study/img/edit.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.deleteVocabularyBtn{
+    border: none;
+    background-color: white;
+    width: 4vmax;
+    height: 6vmax;
+    background-image: url("/static/study/img/delete.png");
+    background-size: cover;
+}
+
+.page_title{
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    height: 20vmin;
+    font-size: 5vh;
+    margin-bottom: 3vh;
+}
+
+.logo{
+    width: 25vmin;
+    cursor: pointer;
+}
+
+.title{
+    width: 75vmin;
+    font-size: 3vh;
+    /* margin-bottom: -2vh; */
+}
+
+.add_word{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vmin;
+    height: 20vh;
+}
+
+.input_word{
+    width: 65vmin;
+    height: 16vh;
+}
+
+.submit_btn{
+    width: 15vmin;
+    height: 15vh;
+    margin-left: 3vmin;
+}
+
+.entrances{
+    display: flex;
+    width: 80vmin;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+
+.entrance{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 69vmin;
+    height: 10vh;
+    font-size: 6vmin;
+    font-weight:normal;
+    border-radius: 1vh;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vmin;
+    height: 10vh;
+    font-size: 1.5vmax;
+    font-weight:normal;
+    border-radius: 1vh;
+    background-color: rgb(202, 202, 202);
+    color: black;
+    border: none;
+}
+
+.entrance:hover{
+    background-color: rgb(66, 66, 66);
+}
+
+.contents:hover{
+    background-color: rgb(215, 215, 215);
+}
+
+.hamberger_menu{
+    position: absolute;
+    top: 8vmin;
+    right: 10vw;
+    width: 5vw;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: left; /*    float: right; 원래 */
+    padding: 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: white;
+    background-image: none;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.icon-bar{
+    background-color: #563d7c; 
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.navbar-toggle .icon-bar+.icon-bar{
+    margin-top: 4px;
+}
