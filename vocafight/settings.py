@@ -27,7 +27,9 @@ SECRET_KEY = "django-insecure-#rru4%_9ihs*zab0rh!dh#hjy7unt6w#va^n(cgr%!9h8c#bj3
 DEBUG = True
 
 ALLOWED_HOSTS = ["ec2-52-78-88-54.ap-northeast-2.compute.amazonaws.com",
-                 "localhost"]
+                 "localhost",
+                 "vocafighting.shop",
+                 ]
 
 
 # Application definition
