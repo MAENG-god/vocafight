@@ -10,6 +10,11 @@ input {
     border-radius: 0;
  }
 
+button{
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 .whole{
     display: flex;
     flex-direction: column;
@@ -50,7 +55,7 @@ input {
     border: none;
     background-color: white;
     width: 8vmin;
-    height: 12vmin;
+    height: 10vmin;
     background-image: url("/static/study/img/delete.png");
     background-size: contain;
     background-repeat: no-repeat;

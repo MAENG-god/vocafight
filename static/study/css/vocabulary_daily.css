@@ -17,6 +17,11 @@ input {
     border-radius: 0;
  }
 
+ button{
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 .title{
     display: flex;
     align-items: center;
