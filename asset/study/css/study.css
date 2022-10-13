@@ -33,14 +33,14 @@ input {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 10vmax;
+    width: 18vmin;
 }
 
 .editTitleBtn{
     border: none;
     background-color: white;
-    width: 4vmax;
-    height: 4vmax;
+    width: 8vmin;
+    height: 8vmin;
     background-image: url("/static/study/img/edit.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -49,8 +49,8 @@ input {
 .deleteVocabularyBtn{
     border: none;
     background-color: white;
-    width: 4vmax;
-    height: 6vmax;
+    width: 8vmin;
+    height: 12vmin;
     background-image: url("/static/study/img/delete.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -68,6 +68,7 @@ input {
 
 .nameInput{
     width: 50vw;
+    height: 6vmax;
     border: none;
     border-bottom: 2px solid black;
 }

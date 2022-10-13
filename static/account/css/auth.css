@@ -26,12 +26,14 @@ body{
 }
 
 .login_btn{
+    -webkit-appearance: none;
     cursor: pointer;
     background-image: url("/static/account/img/kakao_login_medium_wide.png");
     background-size: contain;
-    width: 40vmax;
-    height: 6vmax;
+    background-repeat: no-repeat;
+    width: 40vh;
+    height: 6vh;
     border-radius: 12px;
-    border: 1px solid black;
+    border: none;
     margin-top: -10vmax;
 }
