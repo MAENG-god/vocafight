@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'GothicA1-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.test{
+    display: flex;
+    flex-direction: column;
+    width: 40vmax;
+    outline: 1px soild black;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    height: 20vmin;
+    font-size: 5vh;
+    border-bottom: 1px solid black;
+    margin-bottom: 3vh;
+}
+
+.logo{
+    width: 25vmin;
+    cursor: pointer;
+}
+
+.eng{
+    display: flex;
+    width: 40vmax;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vh;
+    outline: 1px solid black;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    font-family: 'GothicA1-Light';
+}
+
+.kor{
+    display: flex;
+    visibility: hidden;
+    width: 40vmax;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    outline: 1px solid black;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    font-family: 'GothicA1-Light';
+}
+
+.firstHint{
+    display: none;
+    width: 40vmax;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    outline: 1px solid black;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    font-family: 'GothicA1-Light';
+}
+
+.secondHint{
+    display: none;
+    width: 40vmax;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    outline: 1px solid black;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    font-family: 'GothicA1-Light';
+}
+
+.hintGroup{
+    display: flex;
+    justify-content: space-between;
+    width: 40vmax;
+    margin-bottom: 1vh;
+}
+
+.hintBtn{
+    height: 10vh;
+    width: 19.5vmax;
+}
+
+.answer{
+    height: 10vh;
+    margin-bottom: 1vh;
+}
+
+.entrances{
+    display: flex;
+    justify-content: space-between;
+    width: 40vmax;
+}
+
+.quit{
+    height: 10vh;
+    width: 6vmax;
+}
+
+.next{
+    height: 10vh;
+    width: 33vmax;
+}
+
+.hamberger_menu{
+    position: absolute;
+    top: 8vmin;
+    right: 10vw;
+    width: 5vw;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: left; /*    float: right; 원래 */
+    padding: 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: white;
+    background-image: none;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.icon-bar{
+    background-color: #563d7c; 
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.navbar-toggle .icon-bar+.icon-bar{
+    margin-top: 4px;
+}
