@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.startview{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title{
+    height: 50vmax;
+}
+
+.login_btn{
+    cursor: pointer;
+    background-image: url("/static/account/img/kakao_login_medium_wide.png");
+    background-size: contain;
+    width: 40vmax;
+    height: 6vmax;
+    border-radius: 12px;
+    border: 1px solid black;
+    margin-top: -10vmax;
+}
