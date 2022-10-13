@@ -47,7 +47,12 @@ body{
     width: 4vmax;
     height: 6vmax;
     background-image: url("/static/study/img/delete.png");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nameInput{
+    width: 50vw;
 }
 
 .page_title{
@@ -108,6 +113,16 @@ body{
     background-color: black;
     color: white;
     border: none;
+}
+
+.formSubmit{
+    border: none;
+    background-color: white;
+    width: 4vmax;
+    height: 4vmax;
+    background-image: url("/static/study/img/confirm.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .contents{

@@ -54,8 +54,8 @@
         </div>
         <form class="vocabularyTitle showTarget" action="/study/vocabulary/{{id}}/" method="post" style="display:none;">
             {% csrf_token %}
-            <input value="{{vocabulary.name}}" name="vocabularyName" type="text" required>
-            <input type="submit" value="확인" class="btn btn-secondary">
+            <input  class="nameInput" value="{{vocabulary.name}}" name="vocabularyName" type="text" required>
+            <input type="submit" value="" class="formSubmit">
         </form>
         <div class="title">단어 등록하기</div>
         <form class="add_word" action="/study/registration/" method="post">

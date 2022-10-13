@@ -38,6 +38,7 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 45vmax;
+    margin-bottom: 1vh;
 
 }
 
@@ -48,6 +49,7 @@ body{
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     border-right: 1px solid black;
+    border-radius: 1vmax;
 }
 
 .eng{
@@ -71,6 +73,15 @@ body{
     
 }
 
+.engInput{
+    border: none;
+}
+
+.korInput{
+    border: none;
+    border-left: 1px solid black;
+}
+
 .edit{
     border: none;
     background-color: white;
@@ -87,7 +98,18 @@ body{
     width: 2vmax;
     height: 3vmax;
     background-image: url("/static/study/img/delete.png");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.submitBtn{
+    border: none;
+    background-color: white;
+    width: 2vmax;
+    height: 2vmax;
+    background-image: url("/static/study/img/confirm.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .setForm{
