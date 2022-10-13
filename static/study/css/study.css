@@ -5,6 +5,11 @@ body{
     align-items: center;
 }
 
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+ }
+
 .whole{
     display: flex;
     flex-direction: column;
@@ -51,8 +56,20 @@ body{
     background-repeat: no-repeat;
 }
 
+.formSubmit{
+    border: none;
+    background-color: white;
+    width: 4vmax;
+    height: 4vmax;
+    background-image: url("/static/study/img/confirm.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .nameInput{
     width: 50vw;
+    border: none;
+    border-bottom: 2px solid black;
 }
 
 .page_title{
@@ -113,16 +130,6 @@ body{
     background-color: black;
     color: white;
     border: none;
-}
-
-.formSubmit{
-    border: none;
-    background-color: white;
-    width: 4vmax;
-    height: 4vmax;
-    background-image: url("/static/study/img/confirm.png");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .contents{

@@ -12,6 +12,11 @@ body{
     align-items: center;
 }
 
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+ }
+
 .title{
     display: flex;
     align-items: center;
@@ -30,21 +35,21 @@ body{
 .vocabulary{
     display: flex;
     flex-direction: column;
-    width: 45vmax;
+    width: 42vmax;
 }
 
 .voca{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 45vmax;
+    width: 42vmax;
     margin-bottom: 1vh;
 
 }
 
 .set{
     display: flex;
-    width: 40vmax;
+    width: 34vmax;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
@@ -56,7 +61,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20vmax;
+    width: 17vmax;
     padding: 1vh 1vw 1vh 1vw;
     font-family: 'GothicA1-Light';
 }
@@ -65,7 +70,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20vmax;
+    width: 17vmax;
     flex-wrap: wrap;
     border-left: 1px solid black;
     padding: 1vh 1vw 1vh 1vw;
@@ -74,19 +79,23 @@ body{
 }
 
 .engInput{
-    border: none;
+    border: 1px solid black;
+    border-bottom-left-radius: 1vmax;
+    border-top-left-radius: 1vmax;
 }
 
 .korInput{
-    border: none;
-    border-left: 1px solid black;
+    border: 1px solid black;
+    border-bottom-right-radius: 1vmax;
+    border-top-right-radius: 1vmax;
+    border-left: none;
 }
 
 .edit{
     border: none;
     background-color: white;
-    width: 2vmax;
-    height: 2vmax;
+    width: 3vmax;
+    height: 3vmax;
     background-image: url("/static/study/img/edit.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -95,8 +104,8 @@ body{
 .delete{
     border: none;
     background-color: white;
-    width: 2vmax;
-    height: 3vmax;
+    width: 3vmax;
+    height: 4vmax;
     background-image: url("/static/study/img/delete.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -105,15 +114,16 @@ body{
 .submitBtn{
     border: none;
     background-color: white;
-    width: 2vmax;
-    height: 2vmax;
+    width: 3vmax;
+    height: 4vmax;
     background-image: url("/static/study/img/confirm.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .setForm{
-    margin-left: 2.5vmax;
+    margin-left: 4vmax;
+    border: none;
 }
 
 .entrances{
@@ -128,28 +138,30 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30vmax;
+    width: 33vmax;
     height: 10vmin;
     font-size: 5vmin;
-    font-weight:lighter;
+    font-weight:normal;
     border-radius: 1vh;
     background-color: black;
     color: rgb(255, 255, 255);
     border: none;
+    font-family: 'GothicA1-Light';
 }
 
 .contents{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 9vmax;
+    width: 6vmax;
     height: 10vmin;
     font-size: 1.5vmax;
-    font-weight:lighter;
+    font-weight:normal;
     border-radius: 1vh;
     background-color: rgb(202, 202, 202);
     color: black;
     border: none;
+    font-family: 'GothicA1-Light';
 }
 
 .entrance:hover{

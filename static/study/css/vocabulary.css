@@ -5,6 +5,11 @@ body{
     align-items: center;
 }
 
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+ }
+
 .title{
     display: flex;
     align-items: center;

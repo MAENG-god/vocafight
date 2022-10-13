@@ -6,6 +6,11 @@ body{
     height: 100vh;
 }
 
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+ }
+
 .title{
     width: 50vmax;
 
