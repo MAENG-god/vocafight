@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.template import loader
 from django.http import HttpResponse
-from .models import Vocas, Vocabulary
+from .models import Vocas, Vocabulary, Vocabulary_example, Vocabulary_example_deleted, Vocas_example
 from django.contrib.auth.decorators import login_required 
 
 # Create your views here.
@@ -49,11 +49,20 @@ def register(request):
     
 @login_required
 def vocabulary(request):
+    exampleVocabularys = Vocabulary_example.objects.all()
+    examples_deleted = Vocabulary_example_deleted.objects.filter(user=request.user)
+    if examples_deleted:
+        exampleList = []
+    else:
+        exampleList = exampleVocabularys
+             
+    
     vocabularys = Vocabulary.objects.filter(author=request.user)
 
     template = loader.get_template('study/vocabulary.html')
     context = {
         "vocabularys":vocabularys,
+        "exampleVocabularys": exampleList,
     }
     return HttpResponse(template.render(context, request))
 
@@ -69,6 +78,22 @@ def createvocabulary(request):
 
         }
         return HttpResponse(template.render(context, request))
+
+@login_required
+def example(request):
+    vocabulary = Vocabulary_example.objects.all()
+    vocas = Vocas_example.objects.all()
+    template = loader.get_template('study/vocabulary_example.html')
+    context = {
+        "vocabulary": vocabulary,
+        "vocas": vocas,
+    }
+    return HttpResponse(template.render(context, request))
+
+@login_required
+def example_delete(request):
+    Vocabulary_example_deleted.objects.create(user=request.user)
+    return redirect("/study/vocabulary/")
 
 @login_required
 def vocabulary_create(request, id):

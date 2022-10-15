@@ -30,12 +30,22 @@
     <form class="vocabulary" action="/quiz/start/" method="post">
         {% csrf_token %}
         <button class="btn btn-danger testBtn" type="button" onclick="formValidate()">선택 항목 외우러 가기</button>
+    {% for exampleVocabulary in exampleVocabularys %}
+        <button class="btn btn-primary" type="button" onclick="location.href='/quiz/example/'">
+            Example 퀴즈 보러가기
+        </button>
+    {% endfor %}
+    {% if vocabularys %}
     {% for vocabulary in vocabularys %}
         <div class="daily_btn">
             <input name="id" class="form-check-input" type="checkbox" value="{{vocabulary.id}}" id="flexCheckDefault">
             {{vocabulary.name}}
         </div>
     {% endfor %}
+    {% else %}
+        <div class="info">등록된 단어장이 없습니다. 단어장을 등록해주세요!</div>
+    {% endif %}
+
     </form>
     <script src="{% static 'quiz/js/quiz.js' %}"></script>
     <!-- JavaScript Bundle with Popper -->

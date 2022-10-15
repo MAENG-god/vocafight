@@ -49,12 +49,12 @@
         <button class="answer btn btn-primary" onclick="show_mean()">뜻 보기</button>
         <div class="entrances">
             <button class="quit btn btn-dark" onclick="location.href = '/quiz/'">종료</button>
-            <button class="next btn btn-danger" onclick="location.href = '/quiz/start/'">다음</button>
+            <button class="next btn btn-danger" onclick="location.href = '/quiz/example/'">다음</button>
         </div>
     </div>
     {% else %}
-    <div class="test nowords">
-        <div class="info">단어가 없습니다. 단어를 추가해 주세요</div>
+    <div class="test">
+        단어가 없습니다
     </div>
     {% endif %}
     <script src="{% static 'quiz/js/quiz.js' %}"></script>

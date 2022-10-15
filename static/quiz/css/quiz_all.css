@@ -18,6 +18,8 @@ input {
     border-radius: 0;
  }
 
+
+
  button{
     -webkit-appearance: none;
     border-radius: 0;
@@ -28,6 +30,13 @@ input {
     flex-direction: column;
     width: 40vmax;
     outline: 1px soild black;
+}
+
+.nowords{
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title{
@@ -129,6 +138,14 @@ input {
 .next{
     height: 10vh;
     width: 33vmax;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    font-weight: lighter;
+    color: gray;
+    margin: 1vh 1vw 1vh 1vw;
 }
 
 .hamberger_menu{

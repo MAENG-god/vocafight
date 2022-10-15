@@ -36,6 +36,14 @@ input {
     flex-wrap: wrap;
 }
 
+.info{
+    display: flex;
+    align-items: center;
+    font-weight: lighter;
+    color: gray;
+    margin: 1vh 1vw 1vh 1vw;
+}
+
 .daily_btn{
     margin: 1vh 1vw 1vh 1vw;
 }

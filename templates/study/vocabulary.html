@@ -29,9 +29,16 @@
     </div>
     <div class="vocabulary">
         <button class="btn btn-outline-secondary daily_btn" onclick="location.href='/study/create/'">+</button>
+    {% for exampleVocabulary in exampleVocabularys %}
+        <button class="btn btn-outline-secondary daily_btn" onclick="location.href='/study/vocabulary/example/'">{{exampleVocabulary.name}}</button>
+    {% endfor %}
+    {% if vocabularys %}
     {% for vocabulary in vocabularys %}
         <button class="btn btn-outline-secondary daily_btn" onclick="location.href='/study/vocabulary/{{vocabulary.id}}/'">{{vocabulary.name}}</button>
     {% endfor %}
+    {% else %}
+        <div class="info">등록된 단어장이 없습니다. + 버튼을 눌러 등록해보세요!</div>
+    {% endif %}
     </div>
     <script src="{% static 'study/js/vocabulary.js' %}"></script>
     <!-- JavaScript Bundle with Popper -->

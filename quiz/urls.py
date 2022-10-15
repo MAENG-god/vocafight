@@ -6,4 +6,5 @@ urlpatterns = [
     path("", views.quiz, name="quiz"),
     path("all/", views.quiz_all),
     path("start/", views.start, name="start"),
+    path("example/", views.example),
 ]

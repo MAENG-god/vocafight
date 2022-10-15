@@ -6,6 +6,8 @@ urlpatterns = [
     path("entrance/", views.entrance),
     path("registration/", views.register, name="registration"),
     path("vocabulary/", views.vocabulary, name="vocabulary"),
+    path("vocabulary/example/", views.example, name="example"),
+    path("vocabulary/example/delete/", views.example_delete),
     path("create/", views.createvocabulary),
     path("vocabulary/<int:id>/", views.vocabulary_create),
     path("vocabulary/<int:id>/delete/", views.vocabulary_delete),
