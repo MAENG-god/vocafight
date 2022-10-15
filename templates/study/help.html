@@ -28,9 +28,41 @@
             margin-left: 35vw;
             margin-top: 35vw;
         }
+
+        .page_title{
+          position: absolute;
+          top: 3vh;
+          display: flex;
+          align-items: center;
+          width: 90vw;
+          height: 20vmin;
+          font-size: 5vh;
+          margin-bottom: 3vh;
+      }
+      
+        .logo{
+            width: 25vmin;
+            cursor: pointer;
+        }
+
+        .logo_notLogin{
+          width: 25vmin;
+          cursor: pointer;
+        }
+
+        .carousel{
+          margin-top: 12vmax;
+        }
     </style>
 </head>
 <body>
+  <div class="page_title">
+    {% if user.is_authenticated %}
+    <img src="{% static 'study/img/vocafight_logo.png' %}" class="logo" onclick="location.href = '/study/entrance/'">
+    {% else %}
+    <img src="{% static 'study/img/vocafight_logo.png' %}" class="logo_notLogin" onclick="location.href='/study/'">
+    {% endif %}
+  </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
