@@ -40,21 +40,21 @@ input {
 .vocabulary{
     display: flex;
     flex-direction: column;
-    width: 80vmin;
+    width: 95vmin;
 }
 
 .voca{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80vmin;
+    width: 95vmin;
     margin-bottom: 1vh;
 
 }
 
 .set{
     display: flex;
-    width: 70vmin;
+    width: 80vmin;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
@@ -66,7 +66,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35vmin;
+    width: 40vmin;
     padding: 1vh 1vw 1vh 1vw;
     font-family: 'GothicA1-Light';
 }
@@ -75,7 +75,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35vmin;
+    width: 40vmin;
     flex-wrap: wrap;
     border-left: 1px solid black;
     padding: 1vh 1vw 1vh 1vw;
@@ -135,7 +135,7 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70vmin;
+    width: 80vmin;
     margin-bottom: 2vh;
 }
 
@@ -143,7 +143,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 59vmin;
+    width: 69vmin;
     height: 10vmin;
     font-size: 5vmin;
     font-weight:normal;

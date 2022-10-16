@@ -62,11 +62,11 @@
             {% csrf_token %}
             <div class="input_word">
                 <div class="form-floating mb-3">
-                    <input name="voca" type="text" class="form-control" id="floatingInput" placeholder="apple" required>
+                    <input name="voca" type="text" class="form-control wordInput" id="floatingInput" placeholder="apple" required>
                     <label for="floatingInput">Voca</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input name="mean" type="text" class="form-control" id="floatingInput" placeholder="사과" required>
+                    <input name="mean" type="text" class="form-control wordInput" id="floatingInput" placeholder="사과" required>
                     <label for="floatingInput">뜻</label>
                 </div>
                 <input name="id" type="hidden" value="{{id}}">

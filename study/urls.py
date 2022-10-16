@@ -17,4 +17,5 @@ urlpatterns = [
     path("information/", views.information),
     path("help/", views.help),
     path("deleteUser/", views.deleteUser),
+    path("validate/", views.validate)
 ]

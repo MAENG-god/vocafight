@@ -78,6 +78,10 @@ button{
     border-bottom: 2px solid black;
 }
 
+.wordInput{
+    height: 9vh;
+}
+
 .page_title{
     display: flex;
     align-items: center;
@@ -101,19 +105,19 @@ button{
 .add_word{
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 80vmin;
-    height: 20vh;
+    margin-top: 2vh;
+
 }
 
 .input_word{
     width: 65vmin;
-    height: 16vh;
+
 }
 
 .submit_btn{
     width: 15vmin;
-    height: 15vh;
+    height: calc(8rem + 4px);
     margin-left: 3vmin;
 }
 

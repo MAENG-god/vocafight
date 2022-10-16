@@ -6,6 +6,12 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+def validate(request):
+    if request.user.is_authenticated:
+        return redirect("/study/entrance/")
+    else:
+        return redirect("/accounts/kakao/login/")
+
 def help(request):
     user = request.user
     template = loader.get_template('study/help.html')
